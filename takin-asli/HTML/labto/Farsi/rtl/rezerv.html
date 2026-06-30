@@ -1,0 +1,26 @@
+<div class="partner-slider owl-carousel owl-theme">
+    <div class="single-partner">
+        <img src="img/partner1.png" alt="partner">
+    </div>
+    <div class="single-partner">
+        <img src="img/partner2.png" alt="partner">
+    </div>
+    <div class="single-partner">
+        <img src="img/partner3.png" alt="partner">
+    </div>
+</div>
+
+<script>
+$('.partner-slider').owlCarousel({
+    loop: true,
+    nav: false,
+    dots: false,
+    autoplay: true,
+    autoplayTimeout: 3000,
+    responsive: {
+        0: { items: 2 },
+        768: { items: 3 },
+        1024: { items: 5 }
+    }
+});
+</script>
