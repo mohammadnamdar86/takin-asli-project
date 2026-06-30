@@ -1,0 +1,186 @@
+.lab-card {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    align-items: center;
+    padding: 30px;
+    background: #ffffff;
+    border: 4px solid #2563eb;
+    border-radius: 40px;
+    box-shadow: 12px 12px 0px #bfdbfe;
+    max-width: 800px;
+    margin: 20px auto;
+    direction: rtl;
+    transition: all 0.3s ease;
+}
+
+.lab-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 15px 15px 0px #3b82f6;
+}
+
+.lab-title {
+    color: #1e40af;
+    font-size: 24px;
+    font-weight: 900;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.lab-description {
+    color: #4b5563;
+    line-height: 1.8;
+    text-align: justify;
+    font-size: 15px;
+}
+
+.lab-features-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.lab-feature-item {
+    background: #f0fdf4;
+    border: 2px solid #10b981;
+    padding: 8px 15px;
+    border-radius: 15px;
+    color: #065f46;
+    font-weight: bold;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.lab-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    border-top: 3px dashed #e5e7eb;
+    margin-top: 10px;
+}
+
+.price-tag {
+    color: #6b7280;
+    font-size: 14px;
+}
+
+.price-amount {
+    color: #2563eb;
+    font-size: 26px;
+    font-weight: 900;
+}
+
+.lab-btn {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 5px 0 #1e3a8a;
+    transition: all 0.1s;
+}
+
+.lab-btn:hover {
+    background: #1d4ed8;
+    transform: translateY(2px);
+    box-shadow: 0 3px 0 #1e3a8a;
+}
+
+.lab-btn:active {
+    transform: translateY(5px);
+    box-shadow: 0 0 0 #1e3a8a;
+}
+
+@media (min-width: 768px) {
+    .lab-card {
+        grid-template-columns: 1fr 1fr;
+    }
+    .full-width-footer {
+        grid-column: span 2;
+    }
+}
+
+.lab-btn-booking {
+    background: #2563eb;
+    color: white;
+    border: 3px solid #1e3a8a;
+    padding: 15px 35px;
+    border-radius: 25px;
+    font-weight: 900;
+    font-size: 18px;
+    font-family: 'Tahoma', sans-serif;
+    cursor: pointer;
+    box-shadow: 0 8px 0 #1e3a8a;
+    transition: all 0.1s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    outline: none;
+    text-decoration: none;
+}
+
+.lab-btn-booking:hover {
+    background: #1d4ed8;
+    transform: translateY(2px);
+    box-shadow: 0 6px 0 #1e3a8a;
+}
+
+.lab-btn-booking:active {
+    transform: translateY(8px);
+    box-shadow: 0 0 0 #1e3a8a;
+}
+
+.lab-btn-booking::before {
+    content: '📅';
+    font-size: 20px;
+}
+
+@keyframes pulse-scale {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+.animate-booking {
+    animation: pulse-scale 2s infinite ease-in-out;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 15px;
+}
+
+.price-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+@media (max-width: 600px) {
+    .footer-container {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    
+    .price-section {
+        align-items: center;
+    }
+    
+    .lab-btn-booking {
+        width: 100%;
+        justify-content: center;
+    }
+}
